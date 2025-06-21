@@ -1,0 +1,121 @@
+<!-- rental page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NZ Jewellry </title>
+  <link rel="stylesheet" href="style.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!-- header and body section -->
+
+<body>
+<header>
+  <h1>New Zealand Jewellery</h1> 
+</header>
+</body>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+ 
+ <!--This coding is for top navigation bar -->
+<nav class="topnav">
+  <a class="active" href="index.html">Home</a> 
+     <!--This coding is for Browse by product dropdown bar -->
+  <div class="dropdown1">
+    <button class="dropbtn1">Browse by Jewellery
+      <i class="fa fa-caret-down"></i> 
+    </button>
+    <div class="dropdown-content1">
+      <a href="browsebyjewelry.html#earrings"> Earrings </a>
+      <a href="browsebyjewelry.html#necklaceset">Necklace sets</a>
+      <a href="browsebyjewelry.html#rings">Rings</a>      
+      <a href="browsebyjewelry.html#bracelets">Bracelets</a>
+    </div>
+  </div>
+    <!--This coding is for Browse by material dropdown bar --> 
+  <div class="dropdown2">
+    <button class="dropbtn2">Browse by Material
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content2">
+      <a href="browsebymaterial.html#yellowgold">yellow gold</a>
+      <a href="browsebymaterial.html#whitegold">White gold</a>
+      <a href="browsebymaterial.html#rosegold">Rose gold</a>  
+      <a href="browsebymaterial.html#diamond">Diamond</a>
+    </div>
+  </div>
+  <a href="rental.html">Rentals</a>
+    <a href="FAQ.html">FAQ</a>
+</nav>
+ 
+<!---------------------------------------------------------------------------------------------------------------------------------->
+
+ 
+
+ <div class="rental" id="rentcontainer">
+    <img src="images/rose gold earrings.jpg" alt="rental main page image">    </br>
+    <p class="rentmsg">some stuff to write (Nityaa to do )</p>
+    <button class="rentbutton" id="rentbutton" onclick="openForm()">  Lets start browsing  </button>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!-- getting the form to work-->
+<div class="formpopup" id="popupForm">
+  <form class="formcontainer" onsubmit="return SubmitForm(event);">                              <!--onsubmit="return SubmitForm(event);"> is telling the function to return true(allow the form to be submitted (default behavior) or false (cancel the form submission)-->
+   <span class="close" onclick="closeForm()">&times;</span>                                       <!--this is for the x in the corner of the form to close the form-->
+    <label for="Firstname"><b>First name</b></label>
+    <input type="text" placeholder="Enter First name" name="Firstname" id="Firstnamebox"required>
+    <p id="errorMessage1box"></p>
+  
+    <label for="Lastname"><b>Last name</b></label>
+    <input type="text" placeholder="Enter Last name" name="Lastname" id="Lastnamebox"required>
+    <p id="errorMessage2box"></p>
+
+    <label for="Age"><b>Age</b></label>
+    <input type="text" placeholder="Enter Age" name="Age" id="Agebox"required>
+    <p id="errorMessage3box"></p>
+      
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- this is for the catagories images -->
+ <div class="WelMsgbox" id="WelMsgbox"><p id="WelMsgbox"></p></div>
+<div class="WelMsg" id="WelMsg"><p id="WelMsg"></p></div>
+
+
+<!-- Images of jewelry category Nityaa to change images and alt-->
+
+ <div class="JewelContainer" id="JewelContainer">
+<img id="Ear" src="images/gold earrings.jpg" alt="earrings">
+<img id="Ring" src="images/rose gold earrings.jpg" alt="rings">
+<img id="Bracelet" src="images/white gold earrings.webp" alt="Bracelet">
+<img id="NecklaceSet" src="images/white gold earrings.webp" alt="NecklaceSet">
+</div>
+
+ <div class="MaterialContainer" id="MaterialContainer">
+<img id="YG" src="images/gold earrings.jpg" alt="Yellow Gold">
+<img id="RG" src="images/rose gold earrings.jpg" alt="rose gold">
+<img id="WG" src="images/white gold earrings.webp" alt="white gold">
+<img id="HE" src="images/white gold earrings.webp" alt="high end">
+</div>
+
+ <div class="FinalContainer" id="FinalContainer"></div>
+
+<!---<p id="WelcomeMessage"></p>
+<div id="SelMsg" style="display: none;">Products will appear here...</div>---->
+<!---------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------JS file loads at after HTML is loaded---------------------------------------------------------------->
+  <script src="Rental.js" defer></script>
